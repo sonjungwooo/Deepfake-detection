@@ -1,71 +1,69 @@
 # DeepFake-detection
 > Made for Startup competition
 
-## 1. 사업개요
+## 1. Business Overview
 
-### 1-1. 창업 아이디어 제안 동기
+### 1-1. Motivation for the Startup Idea
 
-최근 AI 기술의 급속한 발전은 정보 생산 및 전달 방식에 혁신을 가져왔지만, 동시에 ‘딥페이크’라는 부작용을 낳았다.
-딥페이크 기술은 인물의 얼굴과 목소리를 정교하게 합성해 허위 정보를 생성할 수 있어,
-개인의 명예를 훼손하고 대중의 신뢰를 무너뜨리는 데 악용되고 있다.
+The rapid advancement of AI technology has revolutionized how information is produced and delivered. However, it has also given rise to unintended consequences such as “deepfakes.” This technology can realistically synthesize a person’s face and voice, creating false information that can damage reputations and erode public trust.
 
-특히 청소년과 일반 대중은 딥페이크를 구분할 수단이 부족하고, 잘못된 정보에 쉽게 노출되기 쉽다.
-이런 사회적 문제를 기술적으로 해결하고자, 누구나 모바일에서 손쉽게 사용할 수 있는 딥페이크 영상 판별 앱을 개발하게 되었다.
-이를 통해 정보 신뢰도를 높이고, 디지털 윤리를 지키는 데 기여하고자 한다.
+In particular, teenagers and the general public often lack the means to distinguish deepfakes, making them vulnerable to misinformation. To address this societal issue through technology, we propose a mobile-friendly app that enables anyone to easily detect deepfake videos. The goal is to enhance information reliability and promote digital ethics.
 
 ⸻
 
-### 1-2. 창업 아이디어 핵심내용
+### 1-2. Core Content of the Startup Idea
 
-이 앱은 CNN 기반 딥러닝 모델을 활용해 영상에서 인물의 얼굴, 움직임, 피부 질감, 프레임 간 전환 등 다양한 시각적 요소를 분석한다.
-영상 업로드만으로 AI가 자동으로 진위를 판별하며, 결과는 직관적인 그래픽과 함께 사용자에게 제공된다.
+This app utilizes a CNN-based deep learning model to analyze various visual features in videos, such as facial expressions, movements, skin textures, and frame transitions. Users simply upload a video, and the AI automatically determines its authenticity, presenting the result through an intuitive graphical interface.
 
-	•	기술 핵심:
-	•	TensorFlow 기반 CNN 딥러닝 모델
-	•	OpenCV를 활용한 영상 프레임 추출 및 전처리
-	•	Flask 기반 API 서버로 모바일 앱 연동
-	•	특징:
-	•	모바일 친화적 경량 AI
-	•	클릭 한 번으로 자동 분석
-	•	영상 진위 결과 시각화 기능 포함
-	•	확장 가능성:
-	•	교육기관, 언론사, SNS 플랫폼 등과의 연계
-	•	API 제공을 통한 외부 플랫폼 통합 가능성
+• Core Technologies:
+• CNN deep learning model built with TensorFlow
+• Frame extraction and preprocessing via OpenCV
+• Flask-based API server linked to mobile application
 
-⸻
+• Key Features:
+• Lightweight AI optimized for mobile environments
+• One-click automatic analysis
+• Visualized results for deepfake detection
 
-## 2. 시장현황
-
-### 2-1. 현재 시장 상황
-
-현재 딥페이크 탐지 기술은 마이크로소프트, MIT 등 일부 기관에서 연구·서비스 중이지만,
-전문가용에 한정되어 있고, 일반인이 사용하기 어려운 구조다.
-
-모바일 환경에서 접근 가능한 딥페이크 판별 서비스는 사실상 부재 상태이며,
-대중적 수요는 존재하지만 아직 기술적으로 진입한 스타트업이 적다.
-
-	•	틈새시장: 청소년, 일반인, 교사 등 비전문가
-	•	기술 미충족: 사용자 친화형, 모바일 기반 서비스 부족
-	•	연계 가능성: 경찰청, KISA, 방송통신위원회 등과 협업 가능성
-	•	지식재산권: AI 모델 알고리즘, UI/UX 등 특허 출원 예정
+• Scalability:
+• Potential partnerships with schools, media outlets, and social media platforms
+• API availability for integration with external platforms
 
 ⸻
 
-### 2-2. 사업 가능성 및 판매 전략
+## 2. Market Analysis
 
-	•	자금 조달:
-	•	정부 지원사업(K-Startup, 청년 창업사관학교 등)
-	•	경진대회 수상금
-	•	크라우드 펀딩 및 초기 투자자 모집
-	•	수익 모델:
-	•	기본 기능은 무료, 광고 기반
-	•	프리미엄 분석(고급 검출, 로그 기록 등)은 유료
-	•	교육기관용 계정(관리자 대시보드) 별도 라이선스 제공
-	•	시장 진입 전략:
-	•	교내 시범 운영 → SNS 홍보로 확산
-	•	틱톡, 인스타그램 활용 숏폼 바이럴 영상 제작
-	•	인플루언서와 협업 통한 초기 사용자 확보
-	•	기술 경쟁력:
-	•	실시간 처리 가능한 경량화 모델
-	•	자동 업데이트 기반 AI 성능 향상 구조
-	•	오픈소스 대비 높은 신뢰도와 UX 제공
+### 2-1. Current Market Landscape
+
+Currently, deepfake detection technologies are being researched and offered by institutions like Microsoft and MIT. However, these tools are often designed for experts and are not easily accessible to the general public.
+
+There are virtually no mobile-friendly deepfake detection services, despite a clear demand from non-expert users.
+
+• Market Gap: Teenagers, general public, educators
+• Unmet Needs: User-friendly, mobile-compatible solutions
+• Potential Collaborations: National Police Agency, KISA, Korea Communications Commission, etc.
+• Intellectual Property: Patent applications planned for AI models, UI/UX designs
+
+⸻
+
+### 2-2. Business Feasibility & Sales Strategy
+
+• Funding Sources:
+• Government programs (K-Startup, Youth Startup Academy, etc.)
+• Startup competition prizes
+• Crowdfunding and early-stage investors
+
+• Revenue Model:
+• Core features available for free (ad-supported)
+• Paid premium services (advanced detection, history logging, etc.)
+• Separate licensing for educational institutions (admin dashboard access)
+
+• Market Entry Strategy:
+• Pilot implementation in schools → Promotion via social media
+• Viral short-form content on TikTok and Instagram
+• Collaborations with influencers to build early user base
+
+• Technical Advantage:
+• Lightweight model capable of real-time analysis
+• Self-improving AI through automatic updates
+• Higher reliability and user experience than open-source alternatives
