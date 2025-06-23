@@ -68,6 +68,16 @@ There are virtually no mobile-friendly deepfake detection services, despite a cl
 • Self-improving AI through automatic updates
 • Higher reliability and user experience than open-source alternatives
 
+## Program Structure
+```
+deepfake_detection_program/
+├── model.py             # 1. 모델 정의: Xception 기반 딥러닝 모델 생성
+├── preprocessing.py     # 2. 얼굴 추출 함수: 비디오에서 얼굴 영역 추출
+├── detector.py          # 3. 딥페이크 탐지 함수: 얼굴을 처리해 모델 예측 및 확률 계산
+└── main.py
+```
+
+⸻
 
 ## Website
 ```
@@ -78,3 +88,4 @@ my-webapp/
 ├── static/
 │   ├── style.css
 │   └── script.js
+```
