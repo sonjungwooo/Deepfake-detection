@@ -67,3 +67,14 @@ There are virtually no mobile-friendly deepfake detection services, despite a cl
 • Lightweight model capable of real-time analysis
 • Self-improving AI through automatic updates
 • Higher reliability and user experience than open-source alternatives
+
+
+## Website
+
+my-webapp/
+├── app.py         ← Flask 서버
+├── templates/
+│   └── index.html ← 프론트
+├── static/
+│   ├── style.css
+│   └── script.js
