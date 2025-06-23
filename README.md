@@ -29,7 +29,6 @@ This app utilizes a CNN-based deep learning model to analyze various visual feat
 • Potential partnerships with schools, media outlets, and social media platforms
 • API availability for integration with external platforms
 
-⸻
 
 ## 2. Market Analysis
 
@@ -77,7 +76,6 @@ deepfake_detection_program/
 └── main.py
 ```
 
-⸻
 
 ## Website
 ```
