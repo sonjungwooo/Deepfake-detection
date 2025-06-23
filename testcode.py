@@ -1,7 +1,13 @@
+# git clone https://github.com/ondyari/FaceForensics.git
+# cd FaceForensics
+# pip install -r requirements.txt
+
 git clone https://github.com/ondyari/FaceForensics.git
 cd FaceForensics
+# 예시로 conda 환경 설정 (Python 3.7)
+conda create -n ff_env python=3.7
+conda activate ff_env
 pip install -r requirements.txt
-
 
 
 # 예시: 얼굴 추출 및 모델 예측
