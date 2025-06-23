@@ -70,9 +70,9 @@ There are virtually no mobile-friendly deepfake detection services, despite a cl
 ## Program Structure
 ```
 deepfake_detection_program/
-├── model.py             # 1. 모델 정의: Xception 기반 딥러닝 모델 생성
-├── preprocessing.py     # 2. 얼굴 추출 함수: 비디오에서 얼굴 영역 추출
-├── detector.py          # 3. 딥페이크 탐지 함수: 얼굴을 처리해 모델 예측 및 확률 계산
+├── model.py             # 1. model defining : Xception 기반 딥러닝 모델 생성
+├── preprocessing.py     # 2. face extraction function : 비디오에서 얼굴 영역 추출
+├── detector.py          # 3. deepfake detection function : 얼굴을 처리해 모델 예측 및 확률 계산
 └── main.py
 ```
 
@@ -80,9 +80,9 @@ deepfake_detection_program/
 ## Website
 ```
 my-webapp/
-├── app.py         ← Flask 서버
+├── app.py         ← Flask Server
 ├── templates/
-│   └── index.html ← 프론트
+│   └── index.html ← Front
 ├── static/
 │   ├── style.css
 │   └── script.js
