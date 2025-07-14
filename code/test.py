@@ -113,3 +113,48 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# ---------------------------
+# 5. Streamlit 앱 (app.py)
+# ---------------------------
+import streamlit as st
+import tempfile
+import os
+from detector import deepfake_detection
+
+st.set_page_config(page_title="딥페이크 탐지기", layout="centered")
+st.title("🎭 딥페이크 탐지기 (FaceForensics++)")
+
+st.write("업로드한 비디오 파일에서 얼굴을 추출하고, 사전 학습된 Xception 모델을 이용해 딥페이크 확률을 계산합니다.")
+
+# 모델 가중치 파일 위치 (Streamlit Cloud에 업로드해야 함)
+MODEL_PATH = "xception_ffpp.h5"
+
+uploaded_file = st.file_uploader("비디오 파일 업로드 (.mp4)", type=["mp4"])
+
+if uploaded_file is not None:
+    st.video(uploaded_file)
+
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as tmp_file:
+        tmp_file.write(uploaded_file.read())
+        tmp_video_path = tmp_file.name
+
+    if not os.path.exists(MODEL_PATH):
+        st.error(f"모델 가중치 파일이 없습니다: {MODEL_PATH}")
+    else:
+        st.info("얼굴을 추출하고 분석 중입니다. 잠시만 기다려주세요...")
+        probability = deepfake_detection(tmp_video_path, MODEL_PATH)
+
+        if probability is not None:
+            st.success(f"🎯 딥페이크 확률: {probability:.2f} (0: 진짜, 1: 딥페이크)")
+            if probability >= 0.5:
+                st.markdown("### ⚠️ 이 영상은 **딥페이크일 가능성**이 높습니다.")
+            else:
+                st.markdown("### ✅ 이 영상은 **진짜일 가능성**이 높습니다.")
+        else:
+            st.error("분석 중 오류가 발생했습니다. 다른 파일로 다시 시도해주세요.")
+
+    # 임시 파일 삭제
+    os.remove(tmp_video_path)
+else:
+    st.info("좌측 상단에서 .mp4 파일을 업로드해 주세요.")
